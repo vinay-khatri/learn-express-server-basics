@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/dummy">Posts</a>
+    </nav>
+    <h1>This is your Dummy Posts Page</h1>
+    <h2>Server Side Rendering is being used</h2>
+    <br>
+    <h1>Dummy Posts</h1>
+    <br>
+    <% posts.forEach(post => { %>
+    <h2>Title : <%= post.title %></h2>
+    <h3>Content : <%= post.content %></h3>
+    <h3>Author : <% user %></h3>
+    <% }) %>
+</body>
+
+</html>

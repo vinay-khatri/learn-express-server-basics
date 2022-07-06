@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+    <div class="page">
+        <h1>Title : <%= post.title %></h1>
+        <h2>Content : <%= post.content %></h2>
+        <h3>Created At : <%= post. createdAt%></h3>
+        <br>
+        <!-- NOTE : Custom data attribute name can't contain capitol letters -->
+        <button class="delete" data-docid="<%= post._id %>">Delete Post</button>
+    </div>
+</body>
+
+<!-- Sending Delete Request Using Ajax -->
+<script>
+    const deleteBtn = document.querySelector('.delete')
+    deleteBtn.addEventListener('click', (e) => {
+        fetch(`/posts/${deleteBtn.dataset.docid}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                window.location.href = data.redirect
+            })
+            .catch(err => console.log(err))
+    })
+</script>
+
+</html>

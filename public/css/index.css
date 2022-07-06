@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-transform: none;
+    box-sizing: border-box;
+    font-family: 'Roboto',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: rgb(214, 214, 214);
+}
+
+a,
+a:visited {
+    color: rgb(35, 63, 129);
+    user-select: none;
+}
+
+input,
+select {
+    height: 7vh;
+    margin: 2vh 0;
+    padding-left: 1vw;
+    font-size: 0.94em;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(195, 204, 223);
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0px 0px 2px 2px rgb(35, 146, 219);
+}
+
+button {
+    font-size: 0.94em;
+    color: rgb(221, 221, 221);
+    margin: 0 1vmax;
+    margin-top: 2vh;
+    padding: 1.2vh 2vmax;
+    /* background-color: rgb(92, 65, 65); */
+    background-color: rgb(214, 0, 82);
+    background-color: rgb(235, 36, 96);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 0px rgb(14, 14, 14);
+}
+
+
+/* Custom Styles */
+
+nav {
+    height: 8vh;
+    display: flex;
+    /* align-items: center; */
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: rgb(175, 175, 175);
+}
+
+nav a {
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(146, 146, 146); */
+}
+
+nav a:hover {
+    background-color: rgb(150, 150, 150);
+}
+
+.page {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.page-post {
+    display: grid;
+    justify-content: center;
+}
+
+.page-post h1 {
+    padding: 5vh 0;
+}
+
+.page-post h2 {
+    padding-bottom: 4vh;
+}
+
+.post-card {
+    padding: 4vh 2vw;
+    background-color: rgb(172, 172, 172);
+    border-radius: 10px;
+}
